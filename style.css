@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top left, #7a9282, #b8926a);
+    min-height: 100vh;
+    color: #4a5d4e;
+    
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    object-fit: cover;
+    
+    z-index: 1;
+    position: relative;
+}
+
+/* Top Banner
+.top-banner {
+    position: relative;
+    width: 350px;
+    height: 120px;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+} */
+
+/* .top-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+} */
+
+/* .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+} */
+
+
+.box {
+    position: relative;
+    width: 500px;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:390px) {
+    .box{
+        width: 300px;
+    height: 100vh;
+    }
+}
+
+.login {
+    z-index: 10;
+    text-align: center;
+    width: 100vw;
+}
+
+.login h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color:#224b30;
+    letter-spacing: 1px;
+}
+
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.login input {
+    width: 70%;
+    padding: 12px 40px 12px 20px;
+    border-radius: 25px;
+    border: 2px solid white;
+    background: white;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.input-icon {
+    position: absolute;
+    right: 95px;
+    top: 30%;
+    
+    color: #224b30;
+}
+@media screen and (max-width:390px) {
+    .input-icon {
+        right: 68px;
+    }
+    .login input{
+         padding: 12px 20px 12px 10px;
+    }
+}
+
+
+.login-btn {
+    background: #224b30;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: #566948;
+}
+
+.login-footer {
+    width: 67%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-top: 15px;
+    color: #555;
+}
+
+.login-footer a {
+    color: #8b5e34;
+    text-decoration: none;
+}
+
+
+.side-nav {
+    position: absolute;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+    
+
+}
+
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+@media screen and (max-width:945px) {
+   .side-nav {
+        top: 80%;
+        display: flex;
+        flex-direction: row;
+        left:30%;
+        right: 0%;
+        overflow: hidden;
+        gap: 10px;
+        
+
+    }
+    .nav-item{
+        gap: 5px;
+    }
+}
+@media screen and (max-width:560px) {
+   .side-nav {
+        
+        left:20%;
+
+    }
+}
+    
+@media screen and (max-width:390px) {
+   .side-nav {
+        
+        left:5.6%;
+        
+   }
+}
+
+.nav-item i {
+    font-size: 1.5rem;
+}
+
+
+.circle1, .circle2, .circle3 {
+    height: 420px;
+    width: 420px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    position: absolute;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+}
+@media screen and (max-width:390px) {
+    .circle1, .circle2, .circle3{
+         height: 360px;
+    width: 300px;
+    }
+}
+
+.circle1 { animation: animate 8s infinite linear; }
+.circle2 { animation: animate 12s infinite linear reverse; border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%; }
+.circle3 { animation: animate 15s infinite linear; border-radius: 50%; opacity: 0.3; }
+
+@keyframes animate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Footer */
+.bottom-footer {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons i {
+    margin: 0 10px;
+    cursor: pointer;
+}
