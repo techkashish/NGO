@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Rescue - Unity Harvest</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module">
+import { db, auth } from "./firebase.js";
+import { addDoc, collection }
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+document.querySelector(".btn-action").onclick = async () => {
+    await addDoc(collection(db, "foodRescue"), {
+        donor: auth.currentUser.uid,
+        food: "Cooked Food",
+        quantity: 50,
+        urgency: "HIGH",
+        createdAt: Date.now()
+    });
+    alert("Food rescue posted");
+};
+</script>
+
+</head>
+<body style="background: #fdf2f2;">
+    <div class="dashboard-wrapper" style="background: linear-gradient(135deg, #c0392b 0%, #224b30 100%);">
+        <div class="main-viewport">
+            <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+                <h2 style="color: #e74c3c;"><i class="fas fa-clock"></i> Urgent Food Rescue</h2>
+                <hr style="margin: 20px 0; opacity: 0.1;">
+                
+                <div class="urgent-alert">
+                    <strong>Time Sensitive:</strong> Please ensure food is packed and ready for pickup within 30 minutes of posting.
+                </div>
+
+                <div class="grid-container">
+                    <div>
+                        <label>Food Type</label>
+                        <input type="text" placeholder="e.g. Cooked Meals" style="width:100%; padding:12px; margin:10px 0; border-radius:8px; border:1px solid #ddd;">
+                        
+                        <label>Quantity (Servings)</label>
+                        <input type="number" placeholder="50" style="width:100%; padding:12px; margin:10px 0; border-radius:8px; border:1px solid #ddd;">
+                    </div>
+                    <div>
+                        <label>Expiry Countdown</label>
+                        <input type="text" placeholder="e.g. 3 Hours" style="width:100%; padding:12px; margin:10px 0; border-radius:8px; border:1px solid #ddd;">
+                        
+                        <button class="btn-action" style="width:100%; height: 50px; background: #e74c3c; margin-top: 30px;">ACTIVATE RESCUE</button>
+                    </div>
+                </div>
+                <button class="btn-action" style="background: transparent; color: #666; margin-top: 20px;" onclick="navigateTo('donor-dashboard.html')">← Back</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+
+</body>
+</html>

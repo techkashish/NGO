@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donor Hub - Unity Harvest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <div class="main-viewport">
+            <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Donor Portal</h1>
+                <button class="btn-action" style="background: #e74c3c;" onclick="navigateTo('food-rescue.html')">🚨 URGENT FOOD RESCUE</button>
+            </header>
+
+            <div class="grid-container">
+                <div class="glass-card">
+                    <h3><i class="fas fa-plus-circle"></i> New Donation</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">What would you like to share today?</p>
+                    <input type="text" placeholder="Item Name (e.g. Winter Jackets)" class="login-input" style="width:100%; margin-bottom:15px; border: 1px solid #ddd; padding: 12px; border-radius: 8px;">
+                    <select style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd; margin-bottom:15px;">
+                        <option>Category: Clothes</option>
+                        <option>Category: Books</option>
+                        <option>Category: Toys</option>
+                        <option>Category: Essentials</option>
+                    </select>
+                    <button class="btn-action" style="width: 100%;">Post Donation</button>
+                </div>
+
+                <div class="glass-card">
+                    <h3><i class="fas fa-truck-loading"></i> Recent Activity</h3>
+                    <div style="margin-top:20px;">
+                        <div class="stat-card">
+                            <i class="fas fa-box" style="color: var(--accent-brown); font-size: 1.5rem;"></i>
+                            <div>
+                                <strong>15 School Books</strong><br>
+                                <span style="font-size: 0.8rem; color: #27ae60;">Accepted by Hope NGO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-action" style="margin-top: 20px;" onclick="navigateTo('index.html')">Logout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+
+</body>
+</html>
